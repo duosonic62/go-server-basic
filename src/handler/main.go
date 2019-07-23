@@ -3,6 +3,10 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"reflect"
+	"runtime"
+
+	"golang.org/x/net/http2"
 )
 
 type HelloHandler struct{}
@@ -25,6 +29,15 @@ func worldHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "World!")
 }
 
+// Chain Handler Log
+func log(h http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		name := runtime.FuncForPC(reflect.ValueOf(h).Pointer()).Name()
+		fmt.Println("Handler function called - " + name)
+		h(w, r)
+	}
+}
+
 func main() {
 	hello := HelloHandler{}
 	world := WorldHandler{}
@@ -36,8 +49,9 @@ func main() {
 	http.Handle("/hello", &hello)
 	http.Handle("/world", &world)
 
-	http.HandleFunc("/hello_func", helloHandler)
-	http.HandleFunc("/world_func", worldHandler)
+	http.HandleFunc("/hello_func", log(helloHandler))
+	http.HandleFunc("/world_func", log(worldHandler))
 
+	http2.ConfigureServer(&server, &http2.Server{})
 	server.ListenAndServe()
 }
