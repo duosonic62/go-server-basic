@@ -48,6 +48,23 @@ func include(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func formatData(t time.Time) string {
+	layout := "2006-01-02"
+	return t.Format(layout)
+}
+
+func customTemplateFunc(w http.ResponseWriter, r *http.Request) {
+	funcMap := template.FuncMap{"fdate": formatData}
+	t := template.New("customfunc.html").Funcs(funcMap)
+
+	t, err := t.ParseFiles(templatePath + "/customfunc.html")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		t.Execute(w, time.Now())
+	}
+}
+
 func main() {
 	server := http.Server{
 		Addr: "127.0.0.1:8080",
@@ -56,6 +73,7 @@ func main() {
 	http.HandleFunc("/iterate", iterate)
 	http.HandleFunc("/with", with)
 	http.HandleFunc("/include", include)
+	http.HandleFunc("/custom", customTemplateFunc)
 
 	server.ListenAndServe()
 }
