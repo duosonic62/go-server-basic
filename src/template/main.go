@@ -65,6 +65,17 @@ func customTemplateFunc(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func context(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles(templatePath + "/context.html")
+	content := `I asked: <i>"wha't up?"</i>`
+	t.Execute(w, content)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		t.Execute(w, "Hello")
+	}
+}
+
 func main() {
 	server := http.Server{
 		Addr: "127.0.0.1:8080",
@@ -74,6 +85,7 @@ func main() {
 	http.HandleFunc("/with", with)
 	http.HandleFunc("/include", include)
 	http.HandleFunc("/custom", customTemplateFunc)
+	http.HandleFunc("/context", context)
 
 	server.ListenAndServe()
 }
