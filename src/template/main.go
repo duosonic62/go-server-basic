@@ -30,11 +30,22 @@ func iterate(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func with(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles(templatePath + "/with.html")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		t.Execute(w, "Hello")
+	}
+}
+
 func main() {
 	server := http.Server{
 		Addr: "127.0.0.1:8080",
 	}
 	http.HandleFunc("/processs", process)
 	http.HandleFunc("/iterate", iterate)
+	http.HandleFunc("/with", with)
+
 	server.ListenAndServe()
 }
