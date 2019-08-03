@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9dbbff-fd1a-4387-97b2-b7a3004bb763" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/data/gob/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/gob/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/db/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,33 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/templates/customfunc.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" lean-forward="true" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/templates/t1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/template/main.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/data/csv/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="30" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="30" />
+              <caret line="30" selection-start-line="24" selection-start-column="4" selection-end-line="30" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
               </folding>
@@ -88,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/gob/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="e#14#49#0" expanded="true" />
               </folding>
@@ -100,20 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/templates/context.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/data/db/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="7" lean-forward="true" selection-end-line="12" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/template/templates/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="723">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#14#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,14 +135,13 @@
         <option value="$PROJECT_DIR$/src/data/file/main.go" />
         <option value="$PROJECT_DIR$/src/data/csv/main.go" />
         <option value="$PROJECT_DIR$/src/data/gob/main.go" />
+        <option value="$PROJECT_DIR$/src/data/db/main.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
-    <option name="height" value="1335" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,13 +167,6 @@
               <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="gob" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,12 +212,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="docker-base-go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/template/main.go" />
+      <filePath value="$PROJECT_DIR$/src/data/db/main.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -295,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build main.go (5)" />
         <item itemvalue="Go Build.go build main.go (4)" />
         <item itemvalue="Go Build.go build main.go (3)" />
-        <item itemvalue="Go Build.go build main.go (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -318,12 +278,12 @@
       <workItem from="1563694090759" duration="4876000" />
       <workItem from="1563797208362" duration="644000" />
       <workItem from="1563798594612" duration="10779000" />
-      <workItem from="1564276386257" duration="9834000" />
+      <workItem from="1564276386257" duration="13029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28132000" />
+    <option name="totallyTimeSpent" value="31327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +295,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="2560" height="1335" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.12708499" />
@@ -347,7 +307,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5007278" side_tool="true" weight="0.19066367" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32984716" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989712" visible="true" weight="0.32904264" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989712" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998391" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -355,7 +315,7 @@
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49845678" weight="0.2461786" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32984716" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979424" weight="0.36283186" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979424" weight="0.32919708" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015432" side_tool="true" weight="0.28619814" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,14 +482,14 @@
     <entry file="file://$PROJECT_DIR$/src/template/templates/customfunc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="true" selection-end-line="9" selection-end-column="7" />
+          <caret line="8" column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/template/templates/context.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="true" selection-end-line="12" selection-end-column="7" />
+          <caret line="12" column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -570,19 +530,46 @@
     <entry file="file://$PROJECT_DIR$/src/data/csv/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="30" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="30" />
+          <caret line="30" selection-start-line="24" selection-start-column="4" selection-end-line="30" />
           <folding>
             <element signature="e#14#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/gob/posts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/gob/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="e#14#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/go/go1.12.7/src/database/sql/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="2335" selection-start-line="2335" selection-end-line="2335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/go/go1.12.7/src/sync/rwmutex.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="47" selection-start-line="47" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/db/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#14#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
