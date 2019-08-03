@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9dbbff-fd1a-4387-97b2-b7a3004bb763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/template/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/memory/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/main.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +47,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/template/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
+            <state relative-caret-position="595">
               <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/memory/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/data/file/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="e#14#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +100,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -120,6 +140,8 @@
         <option value="$PROJECT_DIR$/src/template/templates/context.html" />
         <option value="$PROJECT_DIR$/src/template/templates/layout.html" />
         <option value="$PROJECT_DIR$/src/template/main.go" />
+        <option value="$PROJECT_DIR$/src/data/memory/main.go" />
+        <option value="$PROJECT_DIR$/src/data/file/main.go" />
       </list>
     </option>
   </component>
@@ -142,24 +164,6 @@
             <path>
               <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
               <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -185,11 +189,12 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -204,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (2)">
+  <component name="RunManager" selected="Go Build.go build main.go (4)">
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="docker-base-go" />
       <working_directory value="$PROJECT_DIR$" />
@@ -221,6 +226,22 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build main.go (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="docker-base-go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/data/memory/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="docker-base-go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/data/file/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="docker-base-go" />
       <working_directory value="$PROJECT_DIR$" />
@@ -229,24 +250,13 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go-basic-server" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="command" value="go run /go/src/docker-base-go/src/main/main.go" />
-          <option name="containerName" value="go-basic-server" />
-          <option name="entrypoint" value="" />
-          <option name="imageTag" value="golang:latest" />
-          <option name="commandLineOptions" value="-p 8080:8080 -v &quot;$PROJECT_DIR$&quot;:/go/src/docker-base-go" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go (4)" />
+        <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.go build main.go (2)" />
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Docker.go-basic-server" />
       </list>
     </recent_temporary>
   </component>
@@ -265,12 +275,12 @@
       <workItem from="1563694090759" duration="4876000" />
       <workItem from="1563797208362" duration="644000" />
       <workItem from="1563798594612" duration="10779000" />
-      <workItem from="1564276386257" duration="5729000" />
+      <workItem from="1564276386257" duration="8095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24027000" />
+    <option name="totallyTimeSpent" value="26393000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,7 +295,7 @@
     <frame x="4" y="23" width="2560" height="1335" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.12708499" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.12708499" />
       <window_info id="Structure" order="1" sideWeight="0.5007278" side_tool="true" weight="0.19066367" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -294,7 +304,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5007278" side_tool="true" weight="0.19066367" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32984716" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989712" visible="true" weight="0.32904264" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989712" visible="true" weight="0.32904264" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998391" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,8 +499,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/template/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
+        <state relative-caret-position="595">
           <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/memory/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/file/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
