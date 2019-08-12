@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9dbbff-fd1a-4387-97b2-b7a3004bb763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/db/db_rerations/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/db/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/db/db_simple/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/db/db_rerations/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/db/db_rerations/main.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,11 +89,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/data/db/db_rerations/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="239">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
               <folding>
                 <element signature="e#19#89#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/go/go1.12.7/src/database/sql/sql.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="1507" column="14" selection-start-line="1507" selection-start-column="14" selection-end-line="1507" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -108,6 +116,11 @@
         <option value="Go File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="$USER_HOME$/go/go1.12.7" />
   <component name="Git.Settings">
@@ -317,12 +330,12 @@
       <workItem from="1563694090759" duration="4876000" />
       <workItem from="1563797208362" duration="644000" />
       <workItem from="1563798594612" duration="10779000" />
-      <workItem from="1564276386257" duration="14861000" />
+      <workItem from="1564276386257" duration="16214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33159000" />
+    <option name="totallyTimeSpent" value="34512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/go1.12.7/src/database/sql/sql.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="2335" selection-start-line="2335" selection-end-line="2335" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/go1.12.7/src/sync/rwmutex.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -613,10 +619,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/go/go1.12.7/src/database/sql/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1507" column="14" selection-start-line="1507" selection-start-column="14" selection-end-line="1507" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/db/db_rerations/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="239">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="e#19#89#0" expanded="true" />
           </folding>

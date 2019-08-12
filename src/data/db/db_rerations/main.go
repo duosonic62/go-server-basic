@@ -45,7 +45,6 @@ func (comment *Comment) Create() (err error) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(comment.Id)
 	return
 }
 
@@ -72,7 +71,7 @@ func GetPost(id int) (post Post, err error) {
 	post.Comments = []Comment{}
 	err = Db.QueryRow("select id, content, author from posts where id = ?", id).Scan(&post.Id, &post.Content, &post.Author)
 
-	rows, err := Db.Query("select id, conetent, author from comments")
+	rows, err := Db.Query("select id, content, author from comments where post_id = ?", id)
 	if err != nil {
 		return
 	}
@@ -83,6 +82,7 @@ func GetPost(id int) (post Post, err error) {
 		if err != nil {
 			return
 		}
+		fmt.Println(comment)
 		post.Comments = append(post.Comments, comment)
 	}
 	rows.Close()
@@ -90,7 +90,6 @@ func GetPost(id int) (post Post, err error) {
 }
 
 func (post *Post) Create() (err error) {
-	fmt.Println(post)
 	statement, err := Db.Prepare("insert into posts (content, author) values (?, ?)")
 	_, err = statement.Exec(post.Content, post.Author)
 	err = Db.QueryRow("SELECT LAST_INSERT_ID()").Scan(&post.Id)
