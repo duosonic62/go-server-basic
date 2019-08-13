@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9dbbff-fd1a-4387-97b2-b7a3004bb763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/xml_json/xml/encode/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xml_json/xml/encode/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/xml_json/xml/encode/main.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +24,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/xml_json/xml/encode/main.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                <state relative-caret-position="708">
+                  <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
                   <folding>
                     <element signature="e#14#47#0" expanded="true" />
                   </folding>
@@ -37,8 +36,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/xml_json/xml/encode.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -77,8 +76,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/xml_json/xml/decode/main.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="681">
-                  <caret line="66" column="46" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="46" />
+                <state relative-caret-position="825">
+                  <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -195,6 +194,14 @@
               <item name="xml" type="462c0819:PsiDirectoryNode" />
               <item name="decode" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="docker-base-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-base-go" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xml_json" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="encode" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -307,12 +314,12 @@
       <workItem from="1563694090759" duration="4876000" />
       <workItem from="1563797208362" duration="644000" />
       <workItem from="1563798594612" duration="10779000" />
-      <workItem from="1564276386257" duration="20464000" />
+      <workItem from="1564276386257" duration="20967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38762000" />
+    <option name="totallyTimeSpent" value="39265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,24 +634,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xml_json/xml/decode/main.go">
+    <entry file="file://$PROJECT_DIR$/src/xml_json/xml/encode.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="66" column="46" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="46" />
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xml_json/xml/encode.xml">
+    <entry file="file://$PROJECT_DIR$/src/xml_json/xml/decode/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="825">
+          <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xml_json/xml/encode/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="708">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
           <folding>
             <element signature="e#14#47#0" expanded="true" />
           </folding>

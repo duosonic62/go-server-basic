@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 type Post struct {
@@ -18,6 +19,38 @@ type Author struct {
 	Name string `xml:",chardata"`
 }
 
+func encodeMarshal(post *Post) (err error) {
+	output, err := xml.MarshalIndent(&post, "", "\t")
+	if err != nil {
+		fmt.Println("Error marshalling to XML: ", err)
+		return err
+	}
+
+	err = ioutil.WriteFile("src/xml_json/xml/marshal.xml", []byte(xml.Header+string(output)), 0644)
+	if err != nil {
+		fmt.Println("Error writing XML to file: ", err)
+		return err
+	}
+	return nil
+}
+
+func endoceEoncoder(post *Post) (err error) {
+	xmlFile, err := os.Create("src/xml_json/xml/encoder.xml")
+	if err != nil {
+		fmt.Println("Error creating XML file: ", err)
+		return
+	}
+
+	encoder := xml.NewEncoder(xmlFile)
+	encoder.Indent("", "\t")
+	err = encoder.Encode(&post)
+	if err != nil {
+		fmt.Println("Error encoding to XML: ", err)
+		return
+	}
+	return nil
+}
+
 func main() {
 	post := Post{
 		Id:      "1",
@@ -28,15 +61,10 @@ func main() {
 		},
 	}
 
-	output, err := xml.MarshalIndent(&post, "", "\t")
+	err := encodeMarshal(&post)
+	err = endoceEoncoder(&post)
 	if err != nil {
-		fmt.Println("Error marshalling to XML: ", err)
-		return
-	}
-
-	err = ioutil.WriteFile("src/xml_json/xml/encode.xml", []byte(xml.Header+string(output)), 0644)
-	if err != nil {
-		fmt.Println("Error writing XML to file: ", err)
+		fmt.Println(err)
 		return
 	}
 }
