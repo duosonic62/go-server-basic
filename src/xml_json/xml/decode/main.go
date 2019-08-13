@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 )
@@ -27,6 +28,41 @@ type Comment struct {
 	Author  Author `xml:"author"`
 }
 
+func decodeUnmarshal(xmlFile *os.File) (post Post) {
+	xmlData, err := ioutil.ReadAll(xmlFile)
+	if err != nil {
+		fmt.Println("Error reading XML file: ", err)
+		return
+	}
+
+	xml.Unmarshal(xmlData, &post)
+	return post
+}
+
+func decodeDecoder(xmlFile *os.File) {
+	decoder := xml.NewDecoder(xmlFile)
+	for {
+		t, err := decoder.Token()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Println("Error decoding XML into tokens: ", err)
+			return
+		}
+
+		switch se := t.(type) {
+		case xml.StartElement:
+
+			if se.Name.Local == "comment" {
+				var comment Comment
+				decoder.DecodeElement(&comment, &se)
+				fmt.Println(comment)
+			}
+		}
+	}
+}
+
 func main() {
 	xmlFile, err := os.Open("src/xml_json/xml/post.xml")
 	if err != nil {
@@ -35,13 +71,7 @@ func main() {
 	}
 	defer xmlFile.Close()
 
-	xmlData, err := ioutil.ReadAll(xmlFile)
-	if err != nil {
-		fmt.Println("Error reading XML file: ", err)
-		return
-	}
+	//fmt.Println(decodeUnmarshal(xmlFile))
+	decodeDecoder(xmlFile)
 
-	var post Post
-	xml.Unmarshal(xmlData, &post)
-	fmt.Println(post)
 }
