@@ -28,3 +28,15 @@ func TestLongRunningTest(t *testing.T) {
 	}
 	time.Sleep(10 * time.Second)
 }
+
+func BenchmarkDecode(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		decode("post.json")
+	}
+}
+
+func BenchmarkMarshall(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		marshal("post.json")
+	}
+}
