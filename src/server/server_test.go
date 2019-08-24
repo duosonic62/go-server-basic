@@ -22,7 +22,7 @@ func TestMain(m *testing.M) {
 //共通前処理
 func setUp() {
 	mux = http.NewServeMux()
-	mux.HandleFunc("/post/", handleRequest)
+	mux.HandleFunc("/post/", handleRequest(&FakePost{}))
 	writer = httptest.NewRecorder()
 }
 

@@ -1,50 +1,85 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
 	"net/http"
 	"path"
 	"strconv"
 )
 
+type Text interface {
+	fetch(id int) (err error)
+	create() (err error)
+	update() (err error)
+	delete() (err error)
+}
+
 type Post struct {
+	Db      *sql.DB
 	Id      int    `json"id"`
 	Content string `json:"content"`
 	Author  string `json:"author"`
 }
 
 func main() {
+	var err error
+	db, err := sql.Open("mysql", "gwp_dev_user:gwp@/gwp")
+	if err != nil {
+		panic(err)
+	}
+
 	server := http.Server{
 		Addr: "127.0.0.1:8080",
 	}
-	http.HandleFunc("/post/", handleRequest)
+	http.HandleFunc("/post/", handleRequest(&Post{Db: db}))
 	server.ListenAndServe()
 }
 
-func handleRequest(w http.ResponseWriter, r *http.Request) {
-	var err error
-	switch r.Method {
-	case "GET":
-		err = handleGet(w, r)
-	case "POST":
-		err = handlePost(w, r)
-	case "PUT":
-		err = handlePut(w, r)
-	case "DELETE":
-		err = handleDelete(w, r)
-	}
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+func handleRequest(t Text) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		var err error
+		switch r.Method {
+		case "GET":
+			err = handleGet(w, r, t)
+		case "POST":
+			err = handlePost(w, r, t)
+		case "PUT":
+			err = handlePut(w, r, t)
+		case "DELETE":
+			err = handleDelete(w, r, t)
+		}
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
 }
 
-func handleGet(w http.ResponseWriter, r *http.Request) (err error) {
+//func handleRequest(w http.ResponseWriter, r *http.Request) {
+//	var err error
+//	switch r.Method {
+//	case "GET":
+//		err = handleGet(w, r)
+//	case "POST":
+//		err = handlePost(w, r)
+//	case "PUT":
+//		err = handlePut(w, r)
+//	case "DELETE":
+//		err = handleDelete(w, r)
+//	}
+//	if err != nil {
+//		http.Error(w, err.Error(), http.StatusInternalServerError)
+//		return
+//	}
+//}
+
+func handleGet(w http.ResponseWriter, r *http.Request, post Text) (err error) {
 	id, err := strconv.Atoi(path.Base(r.URL.Path))
 	if err != nil {
 		return
 	}
-	post, err := retrieve(id)
+	err = post.fetch(id)
 	if err != nil {
 		return
 	}
@@ -57,11 +92,10 @@ func handleGet(w http.ResponseWriter, r *http.Request) (err error) {
 	return
 }
 
-func handlePost(w http.ResponseWriter, r *http.Request) (err error) {
+func handlePost(w http.ResponseWriter, r *http.Request, post Text) (err error) {
 	len := r.ContentLength
 	body := make([]byte, len)
 	r.Body.Read(body)
-	var post Post
 	json.Unmarshal(body, &post)
 	err = post.create()
 	if err != nil {
@@ -71,12 +105,12 @@ func handlePost(w http.ResponseWriter, r *http.Request) (err error) {
 	return
 }
 
-func handlePut(w http.ResponseWriter, r *http.Request) (err error) {
+func handlePut(w http.ResponseWriter, r *http.Request, post Text) (err error) {
 	id, err := strconv.Atoi(path.Base(r.URL.Path))
 	if err != nil {
 		return
 	}
-	post, err := retrieve(id)
+	err = post.fetch(id)
 	if err != nil {
 		return
 	}
@@ -92,12 +126,12 @@ func handlePut(w http.ResponseWriter, r *http.Request) (err error) {
 	return
 }
 
-func handleDelete(w http.ResponseWriter, r *http.Request) (err error) {
+func handleDelete(w http.ResponseWriter, r *http.Request, post Text) (err error) {
 	id, err := strconv.Atoi(path.Base(r.URL.Path))
 	if err != nil {
 		return
 	}
-	post, err := retrieve(id)
+	err = post.fetch(id)
 	if err != nil {
 		return
 	}
